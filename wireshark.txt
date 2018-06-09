@@ -1,0 +1,2 @@
+lancer en tant que root : 
+sudo wireshark

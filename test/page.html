@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="initial-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta charset="utf-8"/>
+  <title>
+   Simple Polylines
+  </title>
+  <style>
+   html, body, #map-canvas { height: 100%; margin: 0px; padding: 0px }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false">
+  </script>
+  <script>
+   function initialize() { var mapOptions = { zoom: 16, center: new google.maps.LatLng(48.880465,2.374932), mapTypeId: google.maps.MapTypeId.TERRAIN }; var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions); var flightPlanCoordinates = [
+ new google.maps.LatLng(48.897582, 2.385684)
+,new google.maps.LatLng(48.898922, 2.382123)
+,new google.maps.LatLng(48.898908, 2.379762)
+,new google.maps.LatLng(48.898841, 2.375859)
+,new google.maps.LatLng(48.898740, 2.371089)
+,new google.maps.LatLng(48.898707, 2.366563)
+,new google.maps.LatLng(48.898672, 2.365598)
+,new google.maps.LatLng(48.898637, 2.364235)
+,new google.maps.LatLng(48.898633, 2.361735)
+,new google.maps.LatLng(48.898602, 2.359099)
+,new google.maps.LatLng(48.898243, 2.352448)
+,new google.maps.LatLng(48.897960, 2.344465)
+,new google.maps.LatLng(48.897558, 2.328404)
+,new google.maps.LatLng(48.896937, 2.320121)
+,new google.maps.LatLng(48.894257, 2.313641)
+,new google.maps.LatLng(48.890142, 2.303764)
+,new google.maps.LatLng(48.887264, 2.297670)
+,new google.maps.LatLng(48.887490, 2.294666)
+,new google.maps.LatLng(48.885627, 2.291662)
+,new google.maps.LatLng(48.883144, 2.287285)
+,new google.maps.LatLng(48.882015, 2.285740)
+,new google.maps.LatLng(48.880604, 2.285225)
+,new google.maps.LatLng(48.877783, 2.283917)
+,new google.maps.LatLng(48.876710, 2.282715)
+  ]; var flightPath = new google.maps.Polyline({ path: flightPlanCoordinates, geodesic: true, strokeColor: '#FF0000', strokeOpacity: 1.0, strokeWeight: 2 }); flightPath.setMap(map); } google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+ </head>
+ <body>
+  <div id="map-canvas">
+  </div>
+ </body>
+</html>

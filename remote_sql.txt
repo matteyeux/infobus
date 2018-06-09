@@ -1,0 +1,7 @@
+ Fichier : /etc/mysql/mysql.conf.d/mysqld.cnf
+ Changer la ligne bind-address = 127.0.0.1 -> bind-address = 0.0.0.0
+
+ Redemarrer le service MySQL : sudo systemctl restart mysql.service
+
+Commande SQL : 
+GRANT ALL ON *.* TO 'USER'@'192.168.1.100' IDENTIFIED BY 'passwd' WITH GRANT OPTION;
